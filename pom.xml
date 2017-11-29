@@ -4,6 +4,7 @@
     <groupId>com.mycompany</groupId>
     <artifactId>startheroku</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>        
     <name>StartHeroku</name>
     <properties>
         <server.deploy.dir>UTF-8</server.deploy.dir>
