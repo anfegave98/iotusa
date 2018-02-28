@@ -4,7 +4,8 @@
     <groupId>com.mycompany</groupId>
     <artifactId>smartfreetime</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>        
+    <!-- esto es para poder crear servlets en el proyecto en netbeans
+    <packaging>war</packaging>     -->    
     <name>SmartFreeTimeHeroku</name>
     <properties>
         <server.deploy.dir>UTF-8</server.deploy.dir>
