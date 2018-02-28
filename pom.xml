@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.mycompany</groupId>
+    <groupId>com.software</groupId>
     <artifactId>smartfreetime</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <!-- esto es para poder crear servlets en el proyecto en netbeans
-    <packaging>war</packaging>     -->    
+    <version>1.0-SNAPSHOT</version> 
     <name>SmartFreeTimeHeroku</name>
     <properties>
         <server.deploy.dir>UTF-8</server.deploy.dir>
@@ -42,6 +40,7 @@
                 <configuration>
                     <source>1.7</source>
                     <target>1.7</target>
+                    <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
             <!-- The maven app assembler plugin will generate a script that sets up the classpath and runs your project -->
