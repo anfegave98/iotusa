@@ -4,7 +4,7 @@
     <groupId>com.software</groupId>
     <artifactId>startHeroku</artifactId>
     <version>1.0-SNAPSHOT</version> 
-    <name>SYSLAW1Heroku</name>
+    <name>Syslaw1Heroku</name>
     <properties>
         <server.deploy.dir>UTF-8</server.deploy.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
