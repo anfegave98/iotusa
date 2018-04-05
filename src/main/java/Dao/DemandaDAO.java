@@ -6,6 +6,7 @@
 package Dao;
 
 import Model.Demanda;
+import Model.Estadisticas;
 import Util.DbUtil;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -195,6 +196,19 @@ public class DemandaDAO {
             preparedStatement.setInt(38, u.getIdAyudante(d.getId_ayudante()));
         }
         preparedStatement.executeUpdate();
+    }
+
+    public ArrayList<Estadisticas> getDemandadosVeces() throws SQLException {
+        ArrayList<Estadisticas> estadisticas=new ArrayList<>();
+        Statement statement = connection.createStatement();
+        ResultSet rs = statement.executeQuery("select dem_nom,COUNT(dem_nom) as veces from demanda where delete=1 group by dem_nom ");
+        while(rs.next()){
+            Estadisticas e=new Estadisticas();
+            e.setId_usuario(rs.getString("dem_nom"));
+            e.setVeces(rs.getInt("veces"));
+            estadisticas.add(e);
+        }
+        return estadisticas;
     }
 
 }
