@@ -36,14 +36,14 @@ public class DemandaS extends HttpServlet {
             if (opcion.equalsIgnoreCase("allMe")) {
                 DemandaDAO d = new DemandaDAO();
                 Usuario user=(Usuario)request.getSession().getAttribute("usuario");
-                ArrayList<Demanda> demandas=d.getAllDemandasById(user.getId_usuario());
+                ArrayList<Demanda> demandas=d.getAllDemandasById(user.getDocumento());
                 Gson gson = new Gson();
                 out.println(gson.toJson(demandas));
             }
             if (opcion.equalsIgnoreCase("allHelp")) {
                 DemandaDAO d = new DemandaDAO();
                 Usuario user=(Usuario)request.getSession().getAttribute("usuario");
-                ArrayList<Demanda> demandas=d.getAllDemandasById(user.getId_usuario());
+                ArrayList<Demanda> demandas=d.getAllDemandasById(user.getDocumento());
                 Gson gson = new Gson();
                 out.println(gson.toJson(demandas));
             }
@@ -53,6 +53,13 @@ public class DemandaS extends HttpServlet {
                 Demanda demanda=d.getDemandaById(id_demanda);
                 Gson gson = new Gson();
                 out.println(gson.toJson(demanda));
+            }
+            if(opcion.equalsIgnoreCase("allMeDemandado")){
+                DemandaDAO d = new DemandaDAO();
+                Usuario user=(Usuario)request.getSession().getAttribute("usuario");
+                ArrayList<Demanda> demandas=d.getAllDemandasByIdMias(user.getDocumento());
+                Gson gson = new Gson();
+                out.println(gson.toJson(demandas));
             }
         } catch (SQLException | URISyntaxException | ClassNotFoundException ex) {
             Logger.getLogger(DemandaS.class.getName()).log(Level.SEVERE, null, ex);
@@ -70,7 +77,7 @@ public class DemandaS extends HttpServlet {
                 DemandaDAO d = new DemandaDAO();
                 String titulo = request.getParameter("titulo");
                 Usuario user=(Usuario)request.getSession().getAttribute("usuario");
-                d.addDemanda(titulo,user.getId_usuario());
+                d.addDemanda(titulo,user);
                 out.print(gson.toJson(true));
             }
             if (opcion.equalsIgnoreCase("update")) {
@@ -118,6 +125,10 @@ public class DemandaS extends HttpServlet {
                 }
                 d.setDte_dir_not(request.getParameter("dte_dir_not"));
                 d.setDte_email(request.getParameter("dte_email"));
+                if (request.getParameter("dem_id_tipo") != null) {
+                    d.setDem_id_tipo(Integer.parseInt(request.getParameter("dem_id_tipo")));
+                }
+                d.setDem_id(request.getParameter("dem_id"));
                 d.setDem_nom(request.getParameter("dem_nom"));
                 d.setDem_ciu(request.getParameter("dem_ciu"));
                 if (request.getParameter("dem_rep_tiene") != null) {
@@ -168,6 +179,11 @@ public class DemandaS extends HttpServlet {
                 DemandaDAO de = new DemandaDAO(); 
                 de.updateDemanda(d);
                 out.print(gson.toJson(true));
+            }
+            if(opcion.equalsIgnoreCase("endDone")){
+                DemandaDAO de=new DemandaDAO();
+                int id_demanda=Integer.parseInt(request.getParameter("id_demanda"));
+                de.endDone(id_demanda);
             }
         } catch (SQLException | URISyntaxException | ClassNotFoundException ex) {
             Logger.getLogger(DemandaS.class.getName()).log(Level.SEVERE, null, ex);

@@ -146,41 +146,7 @@
                 </div>
                 <!-- #User Info -->
                 <!-- Menu -->
-                <div class="menu">
-                    <ul class="list">
-                        <li class="header">MENÚ DE NAVEGACIÓN</li>
-                        <li class="active">
-                            <a href="#demandas" onclick="resetStorageRedirect('dashboard.jsp')">
-                                <i class="material-icons">clear_all</i>
-                                <span>Mis Demandas</span>
-                            </a>
-                        </li>
-                        <!--
-                        <li>
-                            <a href="studentbase.jsp">
-                                <i class="material-icons">view_array</i>
-                                <span>Horario Base</span>
-                            </a>
-                        </li>
-                        
-                        <li>
-                            <a href="javascript:void(0);" class="menu-toggle">
-                                <i class="material-icons">view_compact</i>
-                                <span>Dashboard</span>
-                            </a>
-                            <ul class="ml-menu">
-                                <li>
-                                    <a href="pages/maps/google.html">Horario Base</a>
-                                </li>
-                                <li>
-                                        <a href="pages/maps/yandex.html">Ver horas disponibles</a>
-                                </li>
-                            </ul>
-                        </li>-->
-
-
-                    </ul>
-                </div>
+                <%@include file="menu.jsp" %>
                 <!-- #Menu -->
                 <!-- Footer -->
                 <div class="legal">
@@ -235,7 +201,7 @@
                                                     <label for="dte_nom">Nombre del demandante</label>
                                                     <div class="form-group">
                                                         <div class="form-line">
-                                                            <input type="text" id="dte_nom" class="form-control" placeholder="Ingrese el nombre...">
+                                                            <input type="text" id="dte_nom" class="form-control" readonly placeholder="Ingrese el nombre...">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -243,11 +209,11 @@
                                                     <label for="dte_ciudad">Ciudad del demandante</label>
                                                     <div class="form-group">
                                                         <div class="form-line">
-                                                            <input type="text" id="dte_ciudad" class="form-control" placeholder="Ingrese la ciudad...">
+                                                            <input type="text" id="dte_ciudad" class="form-control" readonly placeholder="Ingrese la ciudad...">
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
+                                                <div class="col-md-6" style="display:none;">
                                                     <label for="dte_id_tipo">Tipo de id del demandante</label>
                                                     <div class="id-type-radio">
                                                         <input name="dte_id_tipo" type="radio" id="radio_dte_id_tipo_1" value="0"  class="with-gap radio-col-blue" checked="">
@@ -264,7 +230,7 @@
                                                     <label for="dte_id">Numero del demandante</label>
                                                     <div class="form-group">
                                                         <div class="form-line">
-                                                            <input type="text" id="dte_id" class="form-control" placeholder="Número de identificación...">
+                                                            <input type="text" id="dte_id" class="form-control" readonly placeholder="Número de identificación...">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -272,7 +238,7 @@
                                                     <label for="dte_dir_not">Dirección donde recibe notificaciones:</label>
                                                     <div class="form-group">
                                                         <div class="form-line">
-                                                            <input type="text" id="dte_dir_not" class="form-control" placeholder="Dirección de notificaciones...">
+                                                            <input type="text" id="dte_dir_not"  readonly class="form-control" placeholder="Dirección de notificaciones...">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -280,7 +246,7 @@
                                                     <label for="dte_email">Dirección de correo electrónico</label>
                                                     <div class="form-group">
                                                         <div class="form-line">
-                                                            <input type="email" id="dte_email" class="form-control" placeholder="Correo electrónico...">
+                                                            <input type="email" id="dte_email" readonly class="form-control" placeholder="Correo electrónico...">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -344,10 +310,10 @@
                                                     <h3 class="form-section-title">Demandado</h3>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label for="dem_nom">Identificación del demandado</label>
+                                                    <label for="dem_nom">Nombre del demandado</label>
                                                     <div class="form-group">
                                                         <div class="form-line">
-                                                            <input type="text" id="dem_nom" class="form-control" placeholder="Número de identificación...">
+                                                            <input type="text" id="dem_nom" class="form-control" readonly placeholder="Número de identificación...">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -357,15 +323,47 @@
                                                     <label for="dem_ciu">Ciudad de domicilio del demandado</label>
                                                     <div class="form-group">
                                                         <div class="form-line">
-                                                            <input type="text" id="dem_ciu" class="form-control" placeholder="Ingrese la ciudad...">
+                                                            <input type="text" id="dem_ciu" class="form-control" readonly placeholder="Ingrese la ciudad...">
                                                         </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <label for="dem_id_tipo">Tipo de identificación</label>
+                                                    <div class="id-type-radio">
+                                                        <input name="dem_id_tipo" type="radio" id="dem_id_tipo_1" value="0"  class="with-gap radio-col-blue" checked="">
+                                                        <label for="dem_id_tipo_1">C.C</label>
+                                                        <input name="dem_id_tipo" type="radio" id="dem_id_tipo_2" value="1" class="with-gap radio-col-blue">
+                                                        <label for="dem_id_tipo_2">NIT</label>
+                                                        <input name="dem_id_tipo" type="radio" id="dem_id_tipo_3" value="2" class="with-gap radio-col-blue">
+                                                        <label for="dem_id_tipo_3">TI</label>
+                                                        <input name="dem_id_tipo" type="radio" id="dem_id_tipo_4" value="3" class="with-gap radio-col-blue">
+                                                        <label for="dem_id_tipo_4">PASAPORTE</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-3">
+                                                    <label for="dem_id">Documento del demandado</label>
+                                                    <div class="form-group">
+                                                        <div class="form-line">
+                                                            <input type="text" id="dem_id" class="form-control" placeholder="Ingrese el nombre">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label for="dem_id">Verificar documento</label>
+                                                    <div class="form-group">
+                                                        
+                                                            <button type="button" id="botonVerificacion" class="btn bg-purple btn-circle waves-effect waves-circle waves-float">
+                                                                <i class="material-icons">search</i>
+                                                        
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label for="dem_dir_not">Dirección donde recibe notificaciones:</label>
                                                     <div class="form-group">
                                                         <div class="form-line">
-                                                            <input type="text" id="dem_dir_not" class="form-control" placeholder="Dirección de notificaciones...">
+                                                            <input type="text" id="dem_dir_not" class="form-control" readonly placeholder="Dirección de notificaciones...">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -373,7 +371,7 @@
                                                     <label for="dem_email">Dirección de correo electrónico</label>
                                                     <div class="form-group">
                                                         <div class="form-line">
-                                                            <input type="email" id="dem_email" class="form-control" placeholder="Correo electrónico...">
+                                                            <input type="email" id="dem_email" class="form-control" readonly placeholder="Correo electrónico...">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -452,7 +450,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                
+
                                                 <div class="col-md-12" id='pruebasfile'></div>
 
                                                 <div class="col-md-12">    
@@ -503,6 +501,7 @@
                                             </div>
                                         </section>
                                     </form>
+                                    <button type="button" id="finalizar" class="btn btn-success waves-effect">Finalizar</button>
                                 </div>
                             </div>
 

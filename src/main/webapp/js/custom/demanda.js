@@ -173,10 +173,47 @@ $(document).ready(function () {
         paramName: "file",
         maxFilesize: 2
     };
-
-
-
+    //verifica si un demandado se encuentra en la app
+    $("#botonVerificacion").on('click', function () {
+        $.ajax({
+            type: 'GET',
+            url: "UsuarioS",
+            data: {
+                'opcion': "existUser",
+                'documento': $("#dem_id").val()
+            },
+            dataType: "text",
+            success: function (data) {
+                var json = $.parseJSON(data);
+                $('#dem_nom').val(json.nombre);
+                $('#dem_id').val(json.documento);
+                $('input:radio[name=dem_id_tipo]').val([json.tipo_id]);
+                $('#dem_ciu').val(json.ciudad);
+                $('#dem_dir_not').val(json.direccion);
+                $('#dem_email').val(json.correo);
+            },
+            async: false
+        });
+    });
+    //al finalizar una demanda
+    $("#finalizar").on('click', function () {
+        saveChanges();
+        $.ajax({
+            type: 'POST',
+            url: "DemandaS",
+            data: {
+                'opcion': "endDone",
+                'id_demanda':  $('#id_demanda').val()
+            },
+            dataType: "text",
+            success: function (data) {
+                window.location.replace("/SyslawJWA/dashboard.jsp");
+            },
+            async: false
+        });
+    });
 });
+
 
 function generateDropzone(title, subtitle) {
 
@@ -232,6 +269,8 @@ function preLoadDemanda(id_demanda) {
             $('#dte_apo_tar_pro').val(json.dte_apo_tar_pro);
 
             $('#dem_nom').val(json.dem_nom);
+            $('#dem_id').val(json.dem_id);
+            $('input:radio[name=dem_id_tipo]').val([json.dem_id_tipo]);
             $('#dem_ciu').val(json.dem_ciu);
             $('#dem_dir_not').val(json.dem_dir_not);
             $('#dem_email').val(json.dem_email);
@@ -290,6 +329,8 @@ function saveChanges() {
 
             'dem_nom': $('#dem_nom').val(),
             'dem_ciu': $('#dem_ciu').val(),
+            'dem_id_tipo': $('input:radio[name=dem_id_tipo]:checked').val(),
+            'dem_id': $('#dem_id').val(),
             'dem_dir_not': $('#dem_dir_not').val(),
             'dem_email': $('#dem_email').val(),
 
@@ -346,5 +387,8 @@ function setButtonWavesEffect(event) {
     $(event.currentTarget).find('[role="menu"] li a').removeClass('waves-effect');
     $(event.currentTarget).find('[role="menu"] li:not(.disabled) a').addClass('waves-effect');
 }
+
+
+
 
 
