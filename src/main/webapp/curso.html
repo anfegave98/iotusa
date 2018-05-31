@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">    
+    </head>
+    <body>
+        <br>
+        <br>
+        <br>
+        <form id="SelectCurso">                                
+            <div>
+
+                <label>Curso: </label>
+                <select required name="curso" id="curso">
+                    <option value="" selected disabled>Seleccion una opcion</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>      
+                </select>   
+                <br>
+<!--                <button type="submit" >Buscar</button>
+                <a href="menu.jsp" role="button">Volver</a>-->
+            </div>                         
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <form id="SelectEstudiante" class="hidden-sm-up">                                
+            <div>
+                <label>Estudiantes </label>
+                <select required name="estudiante" id="estudiante">
+                    <option value="" selected  disabled>Seleccion un estudiante</option>
+                </select>   
+                <br>
+            </div>                         
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p id="parrafo"></p>
+
+
+        <script src="js/jquery-1.7.1.min.js"></script>
+        <script src="js/app/observador.js"></script>
+    </body>
+</html>

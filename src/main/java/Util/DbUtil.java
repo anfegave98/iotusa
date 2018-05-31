@@ -13,10 +13,10 @@ public class DbUtil {
     public static Connection getConnection() throws SQLException, ClassNotFoundException, IOException {
 
         // Datos de conexión a base de datos remota de PostgreSQL
-        String host = "ec2-107-22-168-211.compute-1.amazonaws.com";
-        String database = "d4j0i17pqpsrb9";
-        String user = "rusrlnugfaivdj";
-        String pass = "5e01e803f8a05c577a8e109a44c84801f6681d1e4e64ce1853300a456297eccc";
+        String host = "ec2-107-22-175-33.compute-1.amazonaws.com";
+        String database = "debo114fl23ifl";
+        String user = "ylwndcmebrlvij";
+        String pass = "11d08d2243339aa3e1aeda21561f54b20dfb3fbdb35d58b42dfb787e008f3e6d";
         String port = "5432";
 
         /*

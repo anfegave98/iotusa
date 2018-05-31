@@ -1,60 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
-    <welcome-file-list>
-        <welcome-file>Welcome.html</welcome-file>
-    </welcome-file-list>
+    <servlet>
+        <servlet-name>ObservadorS</servlet-name>
+        <servlet-class>Controlador.ObservadorS</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProfesorS</servlet-name>
+        <servlet-class>Controlador.ProfesorS</servlet-class>
+    </servlet>
     <servlet>
         <servlet-name>Login</servlet-name>
-        <servlet-class>Controller.Login</servlet-class>
+        <servlet-class>Controlador.Login</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Register</servlet-name>
-        <servlet-class>Controller.Register</servlet-class>
+        <servlet-name>AsistenciaS</servlet-name>
+        <servlet-class>Controlador.AsistenciaS</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>DemandaS</servlet-name>
-        <servlet-class>Controller.DemandaS</servlet-class>
+        <servlet-name>NotaDAO</servlet-name>
+        <servlet-class>Dao.NotaDAO</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>AdministradorS</servlet-name>
-        <servlet-class>Controller.AdministradorS</servlet-class>
+        <servlet-name>NotaS</servlet-name>
+        <servlet-class>Controlador.NotaS</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ContestacionS</servlet-name>
-        <servlet-class>Controller.ContestacionS</servlet-class>
+        <servlet-name>ActividadS</servlet-name>
+        <servlet-class>Controlador.ActividadS</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>UsuarioS</servlet-name>
-        <servlet-class>Controller.UsuarioS</servlet-class>
+        <servlet-name>CursoMateriaS</servlet-name>
+        <servlet-class>Controlador.CursoMateriaS</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Pruebita</servlet-name>
+        <servlet-class>Controlador.Pruebita</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProfesorGestion</servlet-name>
+        <servlet-class>Controlador.ProfesorGestion</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TemaS</servlet-name>
+        <servlet-class>Controlador.TemaS</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DirectorCursoS</servlet-name>
+        <servlet-class>Controlador.DirectorCursoS</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CursoEstudianteS</servlet-name>
+        <servlet-class>Controlador.CursoEstudianteS</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AsistenciaS</servlet-name>
+        <url-pattern>/AsistenciaS</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>MateriaS</servlet-name>
+        <servlet-class>Controlador.MateriaS</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MateriaS</servlet-name>
+        <url-pattern>/MateriaS</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>VerListaAsistenciaS</servlet-name>
+        <servlet-class>Controlador.VerListaAsistenciaS</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VerListaAsistenciaS</servlet-name>
+        <url-pattern>/VerListaAsistenciaS</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CambioS</servlet-name>
+        <servlet-class>Controlador.CambioS</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CambioS</servlet-name>
+        <url-pattern>/CambioS</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>EstudianteS</servlet-name>
+        <servlet-class>Controlador.EstudianteS</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ObservadorS</servlet-name>
+        <url-pattern>/ObservadorS</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProfesorS</servlet-name>
+        <url-pattern>/ProfesorS</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Register</servlet-name>
-        <url-pattern>/Register</url-pattern>
+        <servlet-name>EstudianteS</servlet-name>
+        <url-pattern>/EstudianteS</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>DemandaS</servlet-name>
-        <url-pattern>/DemandaS</url-pattern>
+        <servlet-name>NotaDAO</servlet-name>
+        <url-pattern>/NotaDAO</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>AdministradorS</servlet-name>
-        <url-pattern>/AdministradorS</url-pattern>
+        <servlet-name>NotaS</servlet-name>
+        <url-pattern>/NotaS</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ContestacionS</servlet-name>
-        <url-pattern>/ContestacionS</url-pattern>
+        <servlet-name>ActividadS</servlet-name>
+        <url-pattern>/ActividadS</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>UsuarioS</servlet-name>
-        <url-pattern>/UsuarioS</url-pattern>
+        <servlet-name>CursoMateriaS</servlet-name>
+        <url-pattern>/CursoMateriaS</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Pruebita</servlet-name>
+        <url-pattern>/Pruebita</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CursoS</servlet-name>
+        <servlet-class>Controlador.CursoS</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CursoS</servlet-name>
+        <url-pattern>/CursoS</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProfesorGestion</servlet-name>
+        <url-pattern>/ProfesorGestion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TemaS</servlet-name>
+        <url-pattern>/TemaS</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DirectorCursoS</servlet-name>
+        <url-pattern>/DirectorCursoS</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CursoEstudianteS</servlet-name>
+        <url-pattern>/CursoEstudianteS</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
-    
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
 </web-app>
