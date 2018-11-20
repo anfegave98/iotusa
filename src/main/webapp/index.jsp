@@ -43,15 +43,13 @@
                 <div class="container">
                     <div class="title-brand">
                         &nbsp;
-                        <h1 class="presentation-title">Jardines</h1>
+                        <h1 class="presentation-title">Smart Parking</h1>
 
                         <%-- <div class="fog-low right">
                              <img src="assets/img/fog-low.png" alt="">
                          </div>
                         --%>
                     </div>
-
-                    <h2 class="presentation-subtitle text-center">Kids are the future </h2>
                 </div>
             </div>
             <div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); ">
