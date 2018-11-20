@@ -84,7 +84,7 @@
                                     </span>
                                     <input type="password" class="form-control" placeholder="Contraseña" id="contra">
                                 </div>
-                                <button class="btn btn-warning btn-block btn-round" style="background-color:gray" >Iniciar Sesion</button>
+                                <button class="btn btn-block btn-round" style="background-color:gray" >Iniciar Sesion</button>
                             </form>
 
                         </div>
