@@ -14,7 +14,7 @@
     %>
     <head>
         <meta charset="utf-8" />
-        <link rel="icon" type="image/png" href="assets/img/colegio.ico">
+        <link rel="icon" type="image/png" href="assets/img/carro.ico">
         <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
@@ -37,7 +37,7 @@
 
     </head>
     <body style="background-color:black">
-        <div class="page-header section-dark" style="background-image: url('assets/img/colegio2.jpg')">
+        <div class="page-header section-dark" style="background-image: url('assets/img/parking.jpg')">
             <div class="filter"></div>
             <div class="content-center">
                 <div class="container">
