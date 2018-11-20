@@ -13,12 +13,18 @@ public class DbUtil {
     public static Connection getConnection() throws SQLException, ClassNotFoundException, IOException {
 
         // Datos de conexión a base de datos remota de PostgreSQL
-        String host = "ec2-54-197-249-140.compute-1.amazonaws.com";
-        String database = "dap483qea6vvk2";
-        String user = "kwwxhniprhjmpb";
-        String pass = "8df88b92f67e57517f8cd2ddbc6839741ea57b1f3208cc7b9fd1474385383ce5";
-        String port = "5432";
+        //String host = "ec2-54-197-249-140.compute-1.amazonaws.com";
+        //String database = "dap483qea6vvk2";
+        //String user = "kwwxhniprhjmpb";
+        //String pass = "8df88b92f67e57517f8cd2ddbc6839741ea57b1f3208cc7b9fd1474385383ce5";
+        //String port = "5432";
 
+        String host = "ec2-107-22-175-33.compute-1.amazonaws.com";
+        String database = "debo114fl23ifl";
+        String user = "ylwndcmebrlvij";
+        String pass = "11d08d2243339aa3e1aeda21561f54b20dfb3fbdb35d58b42dfb787e008f3e6d";
+        String port = "5432";
+        
         /*
         // Datos de conexión a base de datos local de PostgreSQL
         String host = "localhost";

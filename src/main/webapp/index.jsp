@@ -2,8 +2,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
-    <%
-        Profesor p = 0;
+     <%
+        Profesor p = (Profesor) request.getSession().getAttribute("profesor");
         if (p != null) {
             if (p.getTipoU() == 0) {
                 response.sendRedirect("menuAdmin.jsp");
