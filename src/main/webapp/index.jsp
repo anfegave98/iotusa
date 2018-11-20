@@ -65,7 +65,7 @@
             <div class="container" >
                 <div class="row" >
                     <div class="col-md-4 ml-auto mr-auto">
-                        <div class="card card-register" style="background-color:#FB404B">
+                        <div class="card card-register" style="background-color:black">
                             <h3 class="title">Bienvenido</h3>
 
                             <form class="register-form" id="ingreso">
@@ -84,7 +84,7 @@
                                     </span>
                                     <input type="password" class="form-control" placeholder="Contraseña" id="contra">
                                 </div>
-                                <button class="btn btn-warning btn-block btn-round" >Iniciar Sesion</button>
+                                <button class="btn btn-warning btn-block btn-round" style="background-color:gray" >Iniciar Sesion</button>
                             </form>
 
                         </div>
