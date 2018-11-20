@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <%
-        Profesor p = (Profesor) request.getSession().getAttribute("profesor");
+        Profesor p = 0;
         if (p != null) {
             if (p.getTipoU() == 0) {
                 response.sendRedirect("menuAdmin.jsp");
